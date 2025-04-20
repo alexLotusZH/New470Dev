@@ -1,0 +1,33 @@
+Q1:
+    i iterates from 0 to 7, assign with {A, B, Cin} = i[2:0];
+
+Q2:
+    The total iteration number is just way too big--2^130
+
+Q3:
+    a.    A   = 0;
+        B   = 0;
+        Cin = -1;
+
+    b.    A   = 1;
+        B   = -1;
+        Cin = 0;
+
+    c.    A   = 0;
+        B   = -1;
+        Cin = 0;
+
+    d.    A   = -1;
+        B   = MAX_64BIT_NUM;
+        Cin = MAX_64BIT_NUM;
+
+Q4:
+    6
+
+Q5:
+    B[3] (in) and S[63] (out)
+
+Q6:
+    and2s2: 2 input AND gate
+    xor3s1: 3 input XOR gate
+    nnd2s2: two input NAND gate
