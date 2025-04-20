@@ -1,0 +1,160 @@
+0
+46
++incdir+
++libext+.v+.vlib+.vh
++multisource_int_delays
++neg_tchk
++overlap
++plusarg_save
++v2k
++vc
++vcs+lic+wait
++warn=noSDFCOM_IANE
++warn=noSDFCOM_IWSBA
++warn=noSDFCOM_PONF
++warn=noSDFCOM_UHICD
++warn=noSDFCOM_UHICD,noSDFCOM_IWSBA,noSDFCOM_IANE,noSDFCOM_PONF
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/caen/vcs-2023.12-SP2-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvirsim.so /usr/caen/vcs-2023.12-SP2-1/linux64/lib/liberrorinf.so /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvfs.so
+-Mout=sim_m_n_int
+-Msaverestoreobj=/usr/caen/vcs-2023.12-SP2-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/caen/vcs-2023.12-SP2-1/include
+-Mxllcflags=
+-full64
+-gen_obj
+-o sim_m_n_int
+-picarchive
+-sverilog
+-timescale=1ns/1ps
+/usr/caen/vcs-2023.12-SP2-1/linux64/bin/vcs1
+sim_m_n_int
+consumer_multi_vo.sv
+producer_multi_vo.sv
+inf_temp.svh
+m_n_arbiter.sv
+../verilog/psel_gen.sv
+../verilog/onehot_translater.sv
+testbench.sv
+94
+which_declare=declare -f
+__LMOD_REF_COUNT_PATH=/usr/caen/vcs-2023.12-SP2-1/bin:1;/usr/caen/verdi-2023.12-SP2-1/bin:1;/usr/um/vscode-1.92.2/code/bin:1;/usr/local/bin:1;/usr/local/sbin:1;/usr/bin:1;/usr/sbin:1;/usr/um/bin:1;/usr/caen/bin:1;/home/lmjhsxc/bin:1
+__LMOD_REF_COUNT_MODULEPATH=/usr/caen/misc/modules:5;/etc/scl/modulefiles:3;/etc/modulefiles:1;/usr/share/modulefiles:1;/usr/caen/misc/class/modules:3;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1
+__LMOD_REF_COUNT_LM_LICENSE_FILE=license.dat:1;/usr/caen/FLEXlm/data/license.dat.synopsys:1
+__GL_SHADER_DISK_CACHE=0
+_ModuleTable_Sz_=4
+_ModuleTable004_=bGVmaWxlczovZXRjL3NjbC9tb2R1bGVmaWxlczovZXRjL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXM6L3Vzci9jYWVuL21pc2MvbW9kdWxlczovdXNyL2NhZW4vbWlzYy9jbGFzcy9tb2R1bGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXg6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3Vzci9jYWVuL21pc2MvbW9kdWxlczovdXNyL2NhZW4vbWlzYy9jbGFzcy9tb2R1bGVzIiwKfQo=
+_ModuleTable003_=Y2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJ2c2NvZGUiLAp3ViA9ICJeMDAwMDAwMDEuMDAwMDAwMDkyLjAwMDAwMDAwMi4qemZpbmFsIiwKfSwKfSwKbXBhdGhBID0gewoiL3Vzci9jYWVuL21pc2MvbW9kdWxlcyIsICIvZXRjL3NjbC9tb2R1bGVmaWxlcyIsICIvZXRjL21vZHVsZWZpbGVzIiwgIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMiLCAiL3Vzci9jYWVuL21pc2MvY2xhc3MvbW9kdWxlcyIsICIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0xpbnV4IgosICIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmUiLCAiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsCn0sCnN5c3RlbUJhc2VNUEFUSCA9ICIvZXRjL3NjbC9tb2R1
+_ModuleTable002_=L3Vzci9jYWVuL21pc2MvbW9kdWxlcy92ZXJkaS8yMDIzLjEyLVNQMi0xLmx1YSIsCmZ1bGxOYW1lID0gInZlcmRpLzIwMjMuMTItU1AyLTEiLApsb2FkT3JkZXIgPSAyLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInZlcmRpLzIwMjMuMTItU1AyLTEiLAp3ViA9ICJeMDAwMDIwMjMuMDAwMDAwMDEyLipzcC4wMDAwMDAwMDIuKnpmaW5hbC0uMDAwMDAwMDAxLip6ZmluYWwiLAp9LAp2c2NvZGUgPSB7CmZuID0gIi91c3IvY2Flbi9taXNjL21vZHVsZXMvdnNjb2RlLzEuOTIuMi5sdWEiLApmdWxsTmFtZSA9ICJ2c2NvZGUvMS45Mi4yIiwKbG9hZE9yZGVyID0gMSwKcHJvcFQgPSB7fSwKc3Rh
+_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IDcyMDAuMCwKY19zaG9ydFRpbWUgPSAwLjAxMDk2MTA1NTc1NTYxNSwKZGVwdGhUID0ge30sCmZhbWlseSA9IHt9LAptVCA9IHsKdmNzID0gewpmbiA9ICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzL3Zjcy8yMDIzLjEyLVNQMi0xLmx1YSIsCmZ1bGxOYW1lID0gInZjcy8yMDIzLjEyLVNQMi0xIiwKbG9hZE9yZGVyID0gMywKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJ2Y3MiLAp3ViA9ICJeMDAwMDIwMjMuMDAwMDAwMDEyLipzcC4wMDAwMDAwMDIuKnpmaW5hbC0uMDAwMDAwMDAxLip6ZmluYWwiLAp9LAp2ZXJkaSA9IHsKZm4gPSAi
+_LMFILES_=/usr/caen/misc/modules/vscode/1.92.2.lua:/usr/caen/misc/modules/verdi/2023.12-SP2-1.lua:/usr/caen/misc/modules/vcs/2023.12-SP2-1.lua
+XMODIFIERS=@im=ibus
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=11288
+XDG_SESSION_DESKTOP=gnome
+XDG_RUNTIME_DIR=/run/user/114354098
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/lmjhsxc/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/share:/usr/local/share:/usr/caen/misc/menus
+XDG_CURRENT_DESKTOP=GNOME
+XAUTHORITY=/run/gdm/auth-for-lmjhsxc-R50I52/database
+VTE_VERSION=5204
+VSCODE_GIT_IPC_HANDLE=/run/user/114354098/vscode-git-9d3c5789b9.sock
+VSCODE_GIT_ASKPASS_NODE=/opt/caen/um/vscode-1.92.2/code/code
+VSCODE_GIT_ASKPASS_MAIN=/opt/caen/um/vscode-1.92.2/code/resources/app/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VMR_MODE_FLAG=64
+VERDI_HOME=/usr/caen/verdi-2023.12-SP2-1
+VCS_TARGET_ARCH=linux64
+VCS_PYTHON3=/usr/caen/vcs-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/caen/vcs-2023.12-SP2-1
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+USERNAME=lmjhsxc
+UNAME=/bin/uname
+TOOL_HOME=/usr/caen/vcs-2023.12-SP2-1/linux64
+TERM_PROGRAM_VERSION=1.92.2
+TERM_PROGRAM=vscode
+SNPS_VCS_PYTHON3=/usr/caen/vcs-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
+SNPS_VCS_CLANG_PATH=/usr/caen/vcs-2023.12-SP2-1/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1194840,unix/unix:/tmp/.ICE-unix/1194840
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_IM_MODULE=ibus
+OVA_UUM=0
+ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
+NO_AT_BRIDGE=1
+MSI2LMP_LIBRARY=/usr/share/lammps/frc_files
+MODULESHOME=/usr/share/lmod/lmod
+MODULEPATH_ROOT=/usr/share/modulefiles
+MODULEPATH=/usr/caen/misc/modules:/etc/scl/modulefiles:/etc/modulefiles:/usr/share/modulefiles:/usr/caen/misc/class/modules:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
+MFLAGS=
+MAKE_TERMOUT=/dev/pts/17
+MAKE_TERMERR=/dev/pts/17
+MAKELEVEL=1
+MAKEFLAGS=
+LOADEDMODULES=vscode/1.92.2:verdi/2023.12-SP2-1:vcs/2023.12-SP2-1
+LMOD_sys=Linux
+LMOD_VERSION=8.7.55
+LMOD_SETTARG_FULL_SUPPORT=no
+LMOD_ROOT=/usr/share/lmod
+LMOD_PKG=/usr/share/lmod/lmod
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+LMOD_CACHED_LOADS=yes
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+LAMMPS_POTENTIALS=/usr/share/lammps/potentials
+KRB5CCNAME=KEYRING:persistent:114354098
+HISTCONTROL=ignoredups
+GNOME_TERMINAL_SERVICE=:1.72
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/e2e65886_41fa_4b94_9982_c2552635599e
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GJS_DEBUG_OUTPUT=stderr
+GIT_ASKPASS=/opt/caen/um/vscode-1.92.2/code/resources/app/extensions/git/dist/askpass.sh
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome
+GDK_BACKEND=x11
+FPATH=/usr/share/lmod/lmod/init/ksh_funcs
+DESKTOP_SESSION=gnome
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-wp06NKjhm2,guid=d78f7a25f538c39436eb3ac0680146f8
+COLORTERM=truecolor
+CHROME_DESKTOP=code-url-handler.desktop
+BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then_ eval "module $@";_ else_ /usr/bin/scl "$@";_ fi_}
+BASH_FUNC_module%%=() {  if [ -z "${LMOD_SH_DBG_ON+x}" ]; then_ case "$-" in _ *v*x*)_ __lmod_sh_dbg='vx'_ ;;_ *v*)_ __lmod_sh_dbg='v'_ ;;_ *x*)_ __lmod_sh_dbg='x'_ ;;_ esac;_ fi;_ if [ -n "${__lmod_sh_dbg:-}" ]; then_ set +$__lmod_sh_dbg;_ echo "Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output" 1>&2;_ fi;_ eval "$($LMOD_CMD shell "$@")" && eval "$(${LMOD_SETTARG_CMD:-:} -s sh)";_ __lmod_my_status=$?;_ if [ -n "${__lmod_sh_dbg:-}" ]; then_ echo "Shell debugging restarted" 1>&2;_ set -$__lmod_sh_dbg;_ fi;_ unset __lmod_sh_dbg;_ return $__lmod_my_status_}
+BASH_FUNC_ml%%=() {  eval "$($LMOD_DIR/ml_cmd "$@")"_}
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+0
+0
+7
+1744496592 testbench.sv
+1743702547 ../verilog/onehot_translater.sv
+1744309677 ../verilog/psel_gen.sv
+1744496821 m_n_arbiter.sv
+1744395648 inf_temp.svh
+1744494675 producer_multi_vo.sv
+1744493756 consumer_multi_vo.sv
+4
+1721620112 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvirsim.so
+1721618558 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/liberrorinf.so
+1721618482 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so
+1721618554 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvfs.so
+1744914356 sim_m_n_int.daidir
+-1 partitionlib

@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1744496826.947834918, "rt":1.53, "ut":0.27, "st":0.16}}
+{"vcselab":{"timestamp_begin":1744496828.575810613, "rt":1.13, "ut":0.21, "st":0.13}}
+{"link":{"timestamp_begin":1744496829.795628377, "rt":0.83, "ut":0.11, "st":0.11}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1744496826.011870533}
+{"VCS_COMP_START_TIME": 1744496826.011870533}
+{"VCS_COMP_END_TIME": 1744496830.779689274}
+{"VCS_USER_OPTIONS": "-o sim_m_n_int +v2k +vc -sverilog -timescale=1ns/1ps +vcs+lic+wait +multisource_int_delays +neg_tchk +incdir+ +plusarg_save +overlap +warn=noSDFCOM_UHICD,noSDFCOM_IWSBA,noSDFCOM_IANE,noSDFCOM_PONF -full64 -cc gcc +libext+.v+.vlib+.vh consumer_multi_vo.sv producer_multi_vo.sv inf_temp.svh m_n_arbiter.sv ../verilog/psel_gen.sv ../verilog/onehot_translater.sv testbench.sv"}
+{"vcs1": {"peak_mem": 825944}}
+{"stitch_vcselab": {"peak_mem": 825993}}

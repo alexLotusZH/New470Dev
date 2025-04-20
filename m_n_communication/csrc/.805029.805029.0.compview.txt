@@ -1,0 +1,7 @@
+Command exited with non-zero status 255
+{"vcs1":{"timestamp_begin":1744493760.534584424, "rt":0.79, "ut":0.14, "st":0.09}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1744493759.384984525}
+{"VCS_COMP_START_TIME": 1744493759.384984525}
+{"VCS_COMP_END_TIME": 1744493761.460514976}
+{"VCS_USER_OPTIONS": "-o sim_m_n_int +v2k +vc -sverilog -timescale=1ns/1ps +vcs+lic+wait +multisource_int_delays +neg_tchk +incdir+ +plusarg_save +overlap +warn=noSDFCOM_UHICD,noSDFCOM_IWSBA,noSDFCOM_IANE,noSDFCOM_PONF -full64 -cc gcc +libext+.v+.vlib+.vh consumer_multi_vo.sv producer_multi_vo.sv inf_temp.svh m_n_arbiter.sv ../verilog/psel_gen.sv ../verilog/onehot_translater.sv testbench.sv"}
+{"vcs1": {"peak_mem": 805844}}
