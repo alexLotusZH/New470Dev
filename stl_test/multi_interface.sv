@@ -71,13 +71,15 @@ endinterface
 
 
 // route left and right with psel
+// left module being helpful, right module being demanding
+// bidirectional data transfer
 module ready_valid_arbiter #(
     parameter type Payload = logic[15:0],
     parameter M = 5,
     parameter N = 3
     )(
-        ready_valid_if left [M-1:0],
-        ready_valid_if right [N-1:0]
+        ready_valid.producer left [M-1:0],
+        ready_valid.consumer right [N-1:0]
 
     );
 
@@ -85,12 +87,20 @@ module ready_valid_arbiter #(
     logic [N-1:0][M-1:0] gnt;
     logic grant_valid[N];
 
+    logic [M-1:0] p_valid;
+
+    genvar i;
+    generate
+        for(i=0; i < M; i++) begin
+            assign p_valid[i] = left[i].valid;
+        end
+    endgenerate
     // Arbitration logic for each consumer
     psel_gen#(
         .WIDTH(M),
         .REQS(N)
     ) p2c_arbiter (
-        .req(left.p_valid),
+        .req(p_valid),
         .gnt(grant_valid),
         .gnt_bus(gnt),
         .empty()
@@ -98,14 +108,14 @@ module ready_valid_arbiter #(
     
     // route Consumer side singals to Producer side.
     always_comb begin
-        in_out.p_ready = '0;
-        in_out.c_data = '0;
+
 
         for(int j = 0; j < N; j++) begin
             for(int i = 0; i < M; i++) begin
                 if(gnt[j][i]) begin
-                    right.valid[i] = left.valid[j];
-                    break;
+                    right[i].valid = left[j].valid;
+                end else begin
+                    right[i].valid = 1'b0;
                 end
             end
         end
@@ -114,17 +124,17 @@ module ready_valid_arbiter #(
         for(int j = 0; j < N; j++) begin
             for(int i = 0; i < M; i++) begin
                 if(gnt[j][i]) begin
-                    right.data[i] = left.data[j];
-                    break;
-                end
+                    right[i].data = left[j].data;
+                end 
             end
         end
 
         for(int j = 0; j < N; j++) begin
             for(int i = 0; i < M; i++) begin
                 if(gnt[j][i]) begin
-                    left.ready[i] = right.ready[j];
-                    break;
+                    left[i].ready = right[j].ready;
+                end else begin
+                    left[i].ready = 1'b0;
                 end
             end
         end
@@ -143,7 +153,7 @@ module Producer #(
 )(
   input logic clk,
   input logic rst,
-  ready_valid_if.producer out
+  ready_valid.producer out
 );
 
 
@@ -151,16 +161,16 @@ module Producer #(
 // Will use generate loop in real cases
     always_ff @(posedge clk) begin
         if(rst) begin
-            out.p_valid <= '0;
-            out.p_data <= '0;
+            out.valid <= '0;
+            out.data <= '0;
         end else begin
-            out.p_valid <= 5'b01001;
-                out.p_data[0] <= 17'h01;
-                out.p_data[1] <= 17'h01;
-                out.p_data[2] <= 17'h02;
-                out.p_data[3] <= 17'h03;
-                out.p_data[4] <= 17'h04;
-            if((|out.p_ready)) $display("Producer received repsonse: %b", out.p_ready);
+            out.valid <= 5'b01001;
+                out.data[0] <= 17'h01;
+                out.data[1] <= 17'h01;
+                out.data[2] <= 17'h02;
+                out.data[3] <= 17'h03;
+                out.data[4] <= 17'h04;
+            if((|out.ready)) $display("Producer received repsonse: %b", out.ready);
         end
 
     end
@@ -174,24 +184,19 @@ module Consumer #(
 )(
   input logic clk,
   input logic rst,
-  ready_valid_if.consumer in
+  ready_valid.consumer in
 );
-    // genvar j;
-    // generate
-    //     for(j=0; j<`N; j++) begin
-    //         if(in.c_valid[j] & in.c_ready[j]);  
-    //     end     
-    // endgenerate
+
 
     always_ff @(posedge clk) begin
         if(rst) begin
-            in.c_ready <= '0;
+            in.ready <= '0;
         end else begin
-            in.c_ready <= 3'b101;
-            if(in.c_valid[0] & in.c_ready[0]) $display("Consumer0 received data: %h", in.c_data);
-            if(in.c_valid[1] & in.c_ready[1]) $display("Consumer1 received data: %h", in.c_data);
-            if(in.c_valid[2] & in.c_ready[2]) $display("Consumer2 received data: %h", in.c_data);
-            $display("cvalid: %b %b", in.c_valid, in.c_ready);
+            in.ready <= 3'b101;
+            if(in.valid[0] & in.ready[0]) $display("Consumer0 received data: %h", in.data[0]);
+            if(in.valid[1] & in.ready[1]) $display("Consumer1 received data: %h", in.data[1]);
+            if(in.valid[2] & in.ready[2]) $display("Consumer2 received data: %h", in.data[2]);
+            $display("cvalid: %b %b", in.valid, in.ready);
         end
     end
 

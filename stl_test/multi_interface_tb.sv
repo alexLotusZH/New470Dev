@@ -11,8 +11,8 @@ module tb;
 
    //  ready_valid_if#(Req) dcache_to_mshr [`M-1:0][`N-1:0]();
      
-    ready_valid_if#(Req) p2c_handshake();
-    ready_valid_arbiter#(Req) p2c_bus(.in_out(p2c_handshake));
+    ready_valid#(Req) p2c_handshake();
+    ready_valid_arbiter#(Req) p2c_bus(.left(p2c_handshake.producer), .right(p2c_handshake.consumer));
     // Use arrary in real case, as parameters will be the same in real project scenario
     Producer #(.N(`NN), .Payload(Req)) p(
         .clk(clk),
