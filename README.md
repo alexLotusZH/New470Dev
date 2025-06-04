@@ -84,3 +84,8 @@ Clock 5:
 | producer empty bits | 1111 | 0000 | 0000 | 1111 |
 |---------------|----------|----------|----------|----------|
 | consumer empty bits | 00 | 00 | 00 | 00 |
+
+# Syntax Example
+An example of defining and instantiating interfaces with parameters and self-defined datatype.
+
+    
