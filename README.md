@@ -72,7 +72,7 @@ Clock 2:
 
 ...
 
-Clock 8:
+Clock 4:
 | producer empty bits | 1111 | 0000 | 0000 | 1111 |
 |---------------|----------|----------|----------|----------|
 | consumer empty bits | 00 | 00 | 00 | 00 |
@@ -80,7 +80,7 @@ Clock 8:
 4th and 13th entry are selected by arbiter and transferred to consumer's 4th and 5th entry. Consumer now is all occupied and producer will not be able to transfer more data to consumer
 
 \
-Clock 9:
+Clock 5:
 | producer empty bits | 1111 | 0000 | 0000 | 1111 |
 |---------------|----------|----------|----------|----------|
 | consumer empty bits | 00 | 00 | 00 | 00 |
