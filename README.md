@@ -86,6 +86,15 @@ Clock 5:
 | consumer empty bits | 00 | 00 | 00 | 00 |
 
 # Syntax Example
-An example of defining and instantiating interfaces with parameters and self-defined datatype.
-
+An example of defining and instantiating interfaces with parameters and self-defined datatype. Cannot work. 
+<pre>
+module Producer #(
+  parameter int N = 3,
+  parameter type Payload = logic[31:0]
+)(
+  input logic clk,
+  input logic rst,
+  ready_valid.producer out
+);
+</pre>
     
