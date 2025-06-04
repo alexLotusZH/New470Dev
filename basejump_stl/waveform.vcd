@@ -1,0 +1,274 @@
+$date
+	Thu Apr 10 15:47:50 2025
+$end
+
+$version
+	Synopsys VCS version T-2022.06_Full64
+$end
+
+$timescale
+	1ps
+$end
+
+$comment Csum: 1 d76d336155bb944f $end
+
+
+$scope module testbench $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+
+$scope module bus $end
+$var reg 1 # valid_1 $end
+$var reg 1 $ valid_2 $end
+$var reg 1 % ready_1 $end
+$var reg 1 & ready_2 $end
+$var reg 8 ' payload_1 [7:0] $end
+$var reg 8 ( payload_2 [7:0] $end
+$var reg 8 ) addr_1 [7:0] $end
+$var reg 8 * addr_2 [7:0] $end
+$upscope $end
+
+
+$scope module producer $end
+$var wire 1 + clk $end
+$var wire 1 , rst_n $end
+$var wire 1 - ready $end
+$var wire 1 . valid $end
+$var reg 8 / payload [7:0] $end
+$var reg 8 0 addr [7:0] $end
+$upscope $end
+
+
+$scope module fifo $end
+$var wire 1 ! clk $end
+$var wire 1 " rst_n $end
+$var reg 3 1 rd_ptr [2:0] $end
+$var reg 3 2 wr_ptr [2:0] $end
+$var reg 4 3 count [3:0] $end
+$upscope $end
+
+
+$scope module consumer $end
+$var reg 8 4 addr_reg [7:0] $end
+$var reg 8 5 payload_reg [7:0] $end
+$var reg 1 6 clk $end
+$var reg 1 7 rst_n $end
+$var wire 1 8 valid $end
+$var reg 8 9 payload [7:0] $end
+$var reg 8 : addr [7:0] $end
+$var wire 1 8 ready $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+0"
+bxxxx 3
+bxxx 1
+bxxx 2
+bxxxxxxxx *
+bxxxxxxxx )
+bxxxxxxxx (
+bxxxxxxxx '
+bxxxxxxxx 0
+bxxxxxxxx /
+bxxxxxxxx :
+bxxxxxxxx 4
+bxxxxxxxx 9
+bxxxxxxxx 5
+06
+0+
+07
+0,
+x%
+x&
+0#
+x$
+x-
+0.
+x8
+$end
+#5000
+1!
+1+
+16
+b000 1
+b000 2
+b0000 3
+1%
+1-
+0$
+08
+0&
+b00000000 /
+b00000000 '
+b00000000 0
+b00000000 )
+b00000000 5
+b00000000 4
+#10000
+0!
+0+
+06
+#15000
+1!
+1+
+16
+#20000
+1"
+1,
+17
+1.
+1#
+0!
+0+
+06
+#25000
+1!
+1+
+16
+b00000000 (
+b00000000 9
+b00000000 *
+b00000000 :
+b001 2
+b0001 3
+1$
+18
+1&
+b00100010 /
+b00100010 '
+b01000100 0
+b01000100 )
+#30000
+0!
+0+
+06
+#35000
+1!
+1+
+16
+b010 2
+b0000 3
+0$
+08
+0&
+b001 1
+b00100010 (
+b00100010 9
+b01000100 *
+b01000100 :
+#40000
+0!
+0+
+06
+#45000
+1!
+1+
+16
+b011 2
+b0001 3
+1$
+18
+1&
+#50000
+0!
+0+
+06
+#55000
+1!
+1+
+16
+b100 2
+b0000 3
+0$
+08
+0&
+b010 1
+b00100010 5
+b01000100 4
+#60000
+0!
+0+
+06
+#65000
+1!
+1+
+16
+b101 2
+b0001 3
+1$
+18
+1&
+#70000
+0!
+0+
+06
+#75000
+1!
+1+
+16
+b110 2
+b0000 3
+0$
+08
+0&
+b011 1
+#80000
+0!
+0+
+06
+#85000
+1!
+1+
+16
+b111 2
+b0001 3
+1$
+18
+1&
+#90000
+0!
+0+
+06
+#95000
+1!
+1+
+16
+b000 2
+b0000 3
+0$
+08
+0&
+b100 1
+#100000
+0!
+0+
+06
+#105000
+1!
+1+
+16
+b001 2
+b0001 3
+1$
+18
+1&
+#110000
+0!
+0+
+06
+#115000
+1!
+1+
+16
+b010 2
+b0000 3
+0$
+08
+0&
+b101 1

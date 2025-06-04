@@ -1,7 +1,3 @@
-
-
-`ifndef CONSUMER_MULTI_DE_SVH
-`define CONSUMER_MULTI_DE_SVH
 `include "inf_temp.svh"
 module consumer_multi_vo #(
     parameter WIDTH = 8
@@ -71,5 +67,3 @@ module consumer_multi_vo #(
 
 
 endmodule
-
-`endif // CONSUMER_VO_SVH

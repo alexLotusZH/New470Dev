@@ -1,8 +1,8 @@
-// `ifndef INF_TEMP_SVH
-// `define INF_TEMP_SVH
+`ifndef VO_IF_SVH
+`define VO_IF_SVH
 
 // typedef logic[7:0] Byte;
-interface inf_temp;
+interface vo_if;
     logic        valid;
     logic        ready;
     logic [7:0]  payload;
@@ -23,17 +23,6 @@ interface inf_temp;
         input  addr,
         output ready
     );
-
-    // modport fifo (
-    //     input  valid_1,
-    //     input  payload_1,
-    //     input  addr_1,
-    //     output ready_1,
-    //     output valid_2,
-    //     output payload_2,
-    //     output addr_2,
-    //     input  ready_2
-    // );
 endinterface
 
-// `endif
+`endif // VO_IF_SVH

@@ -1,6 +1,3 @@
-`ifndef TESTBENCH_SVH
-`define TESTBENCH_SVH
-
 // typedef logic[7:0] Byte;
 module testbench;
     logic clk;
@@ -43,6 +40,15 @@ module testbench;
         .p_if(in1),
         .c_if(in2)
     );
+    monitor #(
+        .IN_WIDTH(IN_WIDTH),
+        .OUT_WIDTH(OUT_WIDTH)
+    ) mon_inst (
+        .clk(clk),
+        .rst_n(rst_n),
+        .p_if(in1),
+        .c_if(in2)
+    );
     always #5 clk = ~clk;
     initial begin
         $dumpfile("waveform.vcd");
@@ -63,9 +69,7 @@ module testbench;
     end
 
     always_ff @( posedge clk ) begin
-        $display("consumer has %b occupied bits in it", arbit.consumer_selected);
+        $display("consumer has %b occupied bits in it", consumer.occupied_reg);
         $display("producer has %b emptied bits in it", producer.empty);
     end
 endmodule
-
-`endif

@@ -1,5 +1,3 @@
-`ifndef PRODUCER_VO_SVH
-`define PRODUCER_VO_SVH
 
 `include "inf_temp.svh"
 module producer_multi_vo#(
@@ -15,30 +13,6 @@ module producer_multi_vo#(
         assign p_if[i].valid = ~empty[i];
     end
     
-    // always_ff @( posedge clk ) begin
-    //     if(~rst_n) begin
-    //         for(int j = 0; j < WIDTH; j++) begin
-    //             p_if[j].payload <= 0;
-    //             p_if[j].addr    <= 0;
-    //         end
-    //         empty <= 0;
-    //     end else begin
-    //         for(int j = 0; j < WIDTH; j++) begin
-    //             p_if[j].payload <= 8'hee;  // replicate 8'hee OUT_WIDTH times
-    //             p_if[j].addr    <= 8'hdd;  // replicate 8'hdd OUT_WIDTH times
-    //         end
-    //         empty <= empty_next;
-    //     end
-    // end
-
-    // always_comb begin
-    //     empty_next = empty;
-    //     for(int i = 0; i< WIDTH; i+=1) begin
-    //         if(p_if[i].ready) begin
-    //             empty_next[i] = 1;
-    //         end
-    //     end
-    // end
     generate
         for (i = 0; i < WIDTH; i++) begin : assign_payloads
             always_ff @(posedge clk) begin
@@ -53,15 +27,6 @@ module producer_multi_vo#(
         end
     endgenerate
 
-    // Combinational logic for empty_next
-    // always_comb begin
-    //     empty_next = empty;
-    //     for (int i = 0; i < WIDTH; i++) begin
-    //         if (p_if[i].ready) begin
-    //             empty_next[i] = 1;
-    //         end
-    //     end
-    // end
     logic [WIDTH-1:0] ready_array;
 
     genvar gi;
@@ -88,4 +53,3 @@ module producer_multi_vo#(
     end
 endmodule
 
-`endif // CONSUMER_VO_SVH
